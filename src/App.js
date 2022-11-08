@@ -5,6 +5,7 @@ import {
 import Login from "./routes/Login"
 import Home from "./routes/Home"
 import Layout from "./routes/Layout"
+import Register from "./routes/Register"
 import UserContextProvider from "./components/userContext"
 import { ProtectedRoute } from "./components/ProtectedRoute"
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ])
 
