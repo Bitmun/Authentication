@@ -1,19 +1,19 @@
 {
   "users": [
     {
-      "email": "hi@gmail.com",
-      "password": "1234",
-      "name": "oleg"
-    },
+      "id": "1668247784567",
+      "email": "email1@gmail.com",
+      "password": "123",
+      "registrationDate": "12.11.2022, 13:09:44"
+    }
+  ],
+  "notes": [
     {
-      "email": "hello@gmail.com",
-      "password": "4321"
-    },
-    {
-      "id": "1667934520211",
-      "email": "123",
-      "password": "1234",
-      "name": "Ivan"
+      "userId": "1668247784567",
+      "id": "1668248585359",
+      "registrationDate": "12.11.2022, 13:23:05",
+      "title": "Title",
+      "text": "some text"
     }
   ]
 }

@@ -9,11 +9,13 @@ export default function Layout() {
 
   return (
     <div className=" p-2">
-      <header className="bg-slate-200 flex gap-3 justify-center mb-5">
+      <header className="bg-slate-200 flex gap-10 justify-center mb-5">
         <NavLink to="/" end={true}>
           Home
         </NavLink>
-
+        <NavLink to="/notes" end={true}>
+          Notes
+        </NavLink>
         <button
           onClick={handleLogOut}
           className="text-red-500"

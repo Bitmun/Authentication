@@ -5,9 +5,19 @@ import {
 import Login from "./routes/Login"
 import Home from "./routes/Home"
 import Layout from "./routes/Layout"
+// import { loader1 as noteLoader } from "./routes/Note"
+import Notes, {
+  loader as notesLoader,
+} from "./routes/Notes"
+import ChangeNote, {
+  loader as noteLoader,
+} from "./routes/ChangeNote"
+import CreateNote from "./routes/CreateNote"
+
 import Register from "./routes/Register"
 import UserContextProvider from "./components/userContext"
 import { ProtectedRoute } from "./components/ProtectedRoute"
+import NoteInfo from "./routes/NoteInfo"
 
 const router = createBrowserRouter([
   {
@@ -26,10 +36,33 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
-
+      {
+        path: "/notes",
+        element: <Notes />,
+        loader: notesLoader,
+      },
+      {
+        path: "/notes/createNote",
+        element: <CreateNote></CreateNote>,
+      },
+      {
+        path: "/notes/changeNote/:noteId",
+        element: <ChangeNote></ChangeNote>,
+        loader: noteLoader,
+      },
+      {
+        path: "/notes/noteInfo/:noteId",
+        element: <NoteInfo></NoteInfo>,
+        loader: noteLoader,
+      },
       {
         path: "*",
-        element: <div>Not found</div>,
+        element: (
+          <div>
+            <div>Not found</div>
+            <button>Press Home to go Home</button>
+          </div>
+        ),
       },
     ],
   },

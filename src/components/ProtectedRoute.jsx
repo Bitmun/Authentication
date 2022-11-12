@@ -6,7 +6,6 @@ export const ProtectedRoute = ({ children }) => {
     user: { email },
   } = useUserContext()
   if (!email) {
-    console.log("here")
     return <Navigate to="/login" />
   }
   return children
